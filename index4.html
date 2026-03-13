@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar con menú desplegable -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Sitio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Servicio 1</a></li>
+                            <li><a class="dropdown-item" href="#">Servicio 2</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Otro Servicio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Registro de Usuarios</h2>
+                <form id="registroForm">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                        <div class="valid-feedback">
+                            ¡Nombre válido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, ingresa un nombre válido.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="valid-feedback">
+                            ¡Correo válido!
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor, ingresa un correo válido.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" required minlength="6">
+                        <div class="valid-feedback">
+                            ¡Contraseña válida!
+                        </div>
+                        <div class="invalid-feedback">
+                            La contraseña debe tener al menos 6 caracteres.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                        <input type="password" class="form-control" id="confirmPassword" required>
+                        <div class="valid-feedback">
+                            ¡Contraseñas coinciden!
+                        </div>
+                        <div class="invalid-feedback">
+                            Las contraseñas no coinciden.
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="terminos" required>
+                        <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+                        <div class="invalid-feedback">
+                            Debes aceptar los términos.
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary" id="submitBtn">Registrarse</button>
+                        <button type="button" class="btn btn-secondary" disabled>Botón Deshabilitado</button>
+                        <button type="button" class="btn btn-success">Botón Éxito</button>
+                        <button type="button" class="btn btn-warning">Botón Advertencia</button>
+                        <button type="button" class="btn btn-danger">Botón Peligro</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Validación del formulario
+        const form = document.getElementById('registroForm');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (!form.checkValidity()) {
+                event.stopPropagation();
+            } else {
+                // Simular envío exitoso
+                alert('Registro exitoso!');
+            }
+            form.classList.add('was-validated');
+        });
+
+        // Validación en tiempo real para confirmar contraseña
+        confirmPassword.addEventListener('input', function() {
+            if (password.value === confirmPassword.value) {
+                confirmPassword.classList.remove('is-invalid');
+                confirmPassword.classList.add('is-valid');
+            } else {
+                confirmPassword.classList.remove('is-valid');
+                confirmPassword.classList.add('is-invalid');
+            }
+        });
+    </script>
+</body>
+</html>
