@@ -1,0 +1,102 @@
+/* Estilos personalizados para la página de pastelería */
+
+/* Base */
+:root {
+  --primary: #b01e5b;
+  --secondary: #fcd5ce;
+  --dark: #3a1d26;
+  --light: #fff6f6;
+  --accent: #ff7f50;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, var(--light), var(--secondary));
+  color: var(--dark);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--primary);
+}
+.navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+.navbar .nav-link:hover {
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgba(58, 29, 38, 0.95);
+  min-height: 100vh;
+}
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+.sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+}
+
+/* Contenido */
+.main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+/* 4 puntos de ruptura */
+
+/* xs: <576px */
+.main-title {
+  font-size: 2rem;
+}
+
+/* sm: ≥576px */
+@media (min-width: 576px) {
+  .main-title {
+    font-size: 2.4rem;
+  }
+  .section {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* md: ≥768px */
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 2.8rem;
+  }
+  .sidebar {
+    padding-top: 3rem;
+  }
+}
+
+/* lg: ≥992px */
+@media (min-width: 992px) {
+  .main-title {
+    font-size: 3.2rem;
+  }
+  .section {
+    padding: 3rem 2.5rem;
+  }
+}
