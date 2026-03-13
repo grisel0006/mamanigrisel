@@ -1,6 +1,6 @@
 /* Estilos personalizados para index3.html (Pastelería Dulce Encanto) */
 
-/* Variables de color */
+/* Variables de color base (desktop) */
 :root {
   --bg-start: #fff7f0;
   --bg-end: #ffe4e1;
@@ -8,6 +8,30 @@
   --secondary: #ffb6b9;
   --text: #2b1b1b;
   --card: rgba(255, 255, 255, 0.9);
+}
+
+/* Celular (<768px): colores más vibrantes y oscuros */
+@media (max-width: 767px) {
+  :root {
+    --bg-start: #ffebee;
+    --bg-end: #ffcdd2;
+    --primary: #d32f2f;
+    --secondary: #ff8a80;
+    --text: #1a1a1a;
+    --card: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* Tablet (768px - 991px): colores suaves y pastel */
+@media (min-width: 768px) and (max-width: 991px) {
+  :root {
+    --bg-start: #f3e5f5;
+    --bg-end: #e1bee7;
+    --primary: #7b1fa2;
+    --secondary: #ba68c8;
+    --text: #2e2e2e;
+    --card: rgba(255, 255, 255, 0.85);
+  }
 }
 
 body {
