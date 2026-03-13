@@ -1,0 +1,96 @@
+/* Estilos personalizados para el Laboratorio DPW2 */
+
+/* Breakpoints para ajustar colores y tamaños de fuente en #number */
+
+/* xs: <576px */
+#number {
+    font-size: 2rem;
+    color: red;
+}
+
+/* sm: ≥576px */
+@media (min-width: 576px) {
+    #number {
+        font-size: 3rem;
+        color: blue;
+    }
+}
+
+/* md: ≥768px */
+@media (min-width: 768px) {
+    #number {
+        font-size: 4rem;
+        color: green;
+    }
+}
+
+/* lg: ≥992px */
+@media (min-width: 992px) {
+    #number {
+        font-size: 5rem;
+        color: orange;
+    }
+}
+
+/* xl: ≥1200px */
+@media (min-width: 1200px) {
+    #number {
+        font-size: 6rem;
+        color: purple;
+    }
+}
+
+/* Cambios de color para la barra superior (navbar) */
+
+/* xs: <576px */
+.navbar {
+    background-color: #b43cae !important;
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #f5f5f5 !important;
+}
+
+/* sm: ≥576px */
+@media (min-width: 576px) {
+    .navbar {
+        background-color: #2972cc !important;
+    }
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        color: #e8e8e8 !important;
+    }
+}
+
+/* md: ≥768px */
+@media (min-width: 768px) {
+    .navbar {
+        background-color: #359771 !important;
+    }
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        color: #f0f0f0 !important;
+    }
+}
+
+/* lg: ≥992px */
+@media (min-width: 992px) {
+    .navbar {
+        background-color: #3472b1 !important;
+    }
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        color: #ffffff !important;
+    }
+}
+
+/* xl: ≥1200px */
+@media (min-width: 1200px) {
+    .navbar {
+        background-color: #9f44c4 !important;
+    }
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+        color: #ffffff !important;
+    }
+}
